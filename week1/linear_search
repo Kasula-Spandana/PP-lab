@@ -1,0 +1,14 @@
+def linear_search(lst):
+       key = int(input(""))
+       for i in range(len(lst)):
+           if lst[i] == key:
+               return i + 1
+       return -1
+result = linear_search([2,1,4,3])
+if result == -1:
+    print("element not found")
+else:
+    print("element is found at ",result)
+INPUT:
+2
+element is found at 1 
