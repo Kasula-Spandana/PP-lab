@@ -1,0 +1,20 @@
+index = 0
+def linear_search_recursion(lst,n,index,ele):
+     if lst[index] == ele:
+         return index + 1
+     elif index < n:
+         return linear_search_recursion(lst,n,index + 1,ele)
+     else:
+         return -1
+ lst = [3,5,1,8]
+ ele = int(input())
+ n = len(lst) - 1
+ res = linear_search_recursion(lst,n,index,ele)
+ if res == -1:
+      print("element is not found")
+ else:
+      print("element is found at",res)
+INPUT:
+5
+OUTPUT:
+element is found at 2
