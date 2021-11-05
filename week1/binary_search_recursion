@@ -1,0 +1,22 @@
+def binary_search_recursion(list,low,high,ele):
+    while(low <= high):
+           mid = (low + high) // 2
+           if ele == list[mid]:
+               return mid + 1
+           elif ele > list[mid]:
+               return binary_search_recursion(list,mid + 1,high,ele)
+           else:
+               return binary_search_recursion(list,low,mid - 1,ele)
+    return -1
+lst = [10,23,34,56]
+ele = int(input())
+n = len(lst) - 1
+result = binary_search_recursion(lst,0,n,ele)
+if result == -1:
+    print("element is not found")
+else:
+    print("element is found at",str(result))
+INPUT:
+34
+OUTPUT:
+element is found at 3
